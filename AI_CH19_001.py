@@ -13,6 +13,6 @@ simpleret.name = 'simpleret'
 print(simpleret.head())
 
 # 計算2期簡單收益率
-simpleret2 = (close -close.shift(2)) / close.shift(2)
+simpleret2 = (close - close.shift(2)) / close.shift(2)
 simpleret2.name = 'simpleret2'
 print(simpleret2.head())
