@@ -27,5 +27,9 @@ print(df2)
 print(df2.cumprod()**2)
 #print(aa)
 
-
+#== test series ==
+print("\n== Test Series using cumprod() ==")
+s = pd.Series([2, np.nan, 5, -1, 0])
+print(s)
+print(s.cumprod()[-1]**1)
 
