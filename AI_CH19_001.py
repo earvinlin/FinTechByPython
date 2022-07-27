@@ -16,11 +16,11 @@ print(simpleret)
 
 '''
 # 計算2期簡單收益率
-simpleret2 = (close -close.shift(2)) / close.shift(2)
+'''
+simpleret2 = (close - close.shift(2)) / close.shift(2)
 simpleret2.name = 'simpleret2'
 print(simpleret2.head())
 '''
-
 annualize = (1+simpleret).cumprod()
 print("== Test cumprod() ==")
 print(annualize)
@@ -32,3 +32,4 @@ print(annualize)
 annualize = (1+simpleret).cumprod()[-1]**(245/311)-1
 print("== Test cumprod()[-1]**(245/311)-1 ==")
 print(annualize)
+'''
