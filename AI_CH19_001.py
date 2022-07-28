@@ -20,7 +20,7 @@ print(simpleret)
 simpleret2 = (close - close.shift(2)) / close.shift(2)
 simpleret2.name = 'simpleret2'
 print(simpleret2.head())
-'''
+
 annualize = (1+simpleret).cumprod()
 print("== Test cumprod() ==")
 print(annualize)
@@ -29,7 +29,6 @@ annualize = (1+simpleret).cumprod()[-1]
 print("== Test cumprod()[-1] ==")
 print(annualize)
 
-annualize = (1+simpleret).cumprod()[-1]**(245/311)-1
-print("== Test cumprod()[-1]**(245/311)-1 ==")
+annualize = (1+simpleret).cumprod()[-1:]**(245/311)-1
+print("== Test cumprod()[-1:]**(245/311)-1 ==")
 print(annualize)
-'''

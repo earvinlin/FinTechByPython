@@ -24,12 +24,18 @@ df2 = pd.DataFrame([1, 2, 3, 5])
 print(df2)
 
 # 回傳值再平方
-print(df2.cumprod()**2)
+print(df2.cumprod()[-1:]**2)
 #print(aa)
 
+'''
 #== test series ==
 print("\n== Test Series using cumprod() ==")
 s = pd.Series([2, np.nan, 5, -1, 0])
 print(s)
-print(s.cumprod()[-1]**1)
-
+#print(s.cumprod()[-1]**1)
+s4 = s.cumprod()[-1:]
+print(s4)
+#ary = pd.Series([4, 7, -5, 3])
+#a1 = ary[-1:]
+#print(a1)
+'''
