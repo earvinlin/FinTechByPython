@@ -5,6 +5,11 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 import matplotlib.pylab as mp
 
+
+
+
+
+
 # == Test Round 1 STR ==
 """ 
 # 20220607 檔案路徑不對
@@ -36,6 +41,7 @@ print(stats.t.interval(0.95, len(TaiexRet) - 1, mu, stats.sem(TaiexRet)))
 
 
 # == Test Round 2 STR ==
+"""
 x = 5
 theOutcomes = np.random.binomial(3, 0.5, 500)
 print("白努利分佈：", theOutcomes)
@@ -58,7 +64,7 @@ print(theArray)
 # 
 #sns.distplot(np.random.binomial(n=10, p=0.5, size=1000), hist=True, kde=False)
 #plt.show()
-
+"""
 # == Test Round 2 END ==
 
 
