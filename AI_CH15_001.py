@@ -5,7 +5,26 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 import matplotlib.pylab as mp
 
+tw50 = pd.read_csv('tsec.csv', sep=',')
+print(tw50)
 
+t_end_price = tw50.end_price.astype(np.float64)
+#t_end_price.hist()
+#plt.show()
+
+print(tw50.end_price.describe())
+
+# 說明 https://medium.com/qiubingcheng/%E7%99%BD%E8%A9%B1%E8%A7%A3%E9%87%8B%E6%A0%B8%E5%AF%86%E5%BA%A6%E4%BC%B0%E8%A8%88-kernel-density-estimation-18c4913f0b6a
+density = stats.kde.gaussian_kde(t_end_price)
+# arange : 以等差數列產生，指定間隔
+bins = np.arange(0,20000,100)
+plt.subplot(311)
+plt.plot(bins, density(bins))
+plt.title('TSEC end-price pdf curve diagram')
+plt.subplot(313)
+plt.plot(bins,density(bins).cumsum())
+plt.title('TSEC end-price cdf curve diagram')
+plt.show()
 
 
 
